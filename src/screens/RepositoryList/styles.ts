@@ -1,6 +1,10 @@
 import { LinearGradient } from "expo-linear-gradient";
 import styled from "styled-components/native";
 
+interface Props {
+  color: string;
+}
+
 export const Container = styled(LinearGradient).attrs({
   colors: ["#7159c1", "#9849c1"],
   start: { x: 0, y: 0 },
@@ -40,4 +44,26 @@ export const TotalNumber = styled.Text`
   color: #fff;
   font-weight: 600;
   margin-top: 20px;
+`;
+
+export const ButtonsContainer = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  padding-horizontal: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+`;
+
+export const NextButton = styled.TouchableOpacity`
+  height: 50px;
+  width: 80px;
+  border-radius: 8px;
+  background-color: ${(props: Props) => props.color};
+  align-items: center;
+  justify-content: center;
+`;
+
+export const NextButtonText = styled.Text`
+  color: #000;
+  font-size: 15px;
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { FontAwesome } from "@expo/vector-icons";
 
 import * as S from "./styles";
@@ -35,4 +35,4 @@ const Repository: React.FC<Props> = ({ data }) => {
   );
 };
 
-export default Repository;
+export default memo(Repository);
