@@ -1,9 +1,12 @@
 import { LinearGradient } from "expo-linear-gradient";
+import { Dimensions } from "react-native";
 import styled from "styled-components/native";
 
 interface Props {
   color: string;
 }
+
+const { width, height } = Dimensions.get("screen");
 
 export const Container = styled(LinearGradient).attrs({
   colors: ["#7159c1", "#9849c1"],
@@ -56,8 +59,8 @@ export const ButtonsContainer = styled.View`
 
 export const NextButton = styled.TouchableOpacity`
   height: 50px;
-  width: 80px;
-  border-radius: 8px;
+  width: ${width * 0.4}px;
+  border-radius: 12px;
   background-color: ${(props: Props) => props.color};
   align-items: center;
   justify-content: center;
